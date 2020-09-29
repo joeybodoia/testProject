@@ -38,6 +38,18 @@ router.get('/',(req,res)=>{
     // res.render("anime/index.jsx")
 })
 
+// NEW
+router.get('/new', (req,res)=>{
+    res.render("anime/New.jsx")
+})
+
+// CREATE
+router.post("/",(req,res)=>{
+    Anime.create(req.body, (err,createdAnime)=>{
+        res.redirect("/animeRec")
+    })
+})
+
 
 // SHOW
 router.get("/:id",(req,res)=>{
@@ -48,5 +60,7 @@ router.get("/:id",(req,res)=>{
         })
     })
 })
+
+
 
 module.exports = router;
