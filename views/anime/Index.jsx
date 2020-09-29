@@ -10,7 +10,7 @@ class Index extends React.Component {
                         return (
                             <div>
                                 <h1>Name: {data.name}</h1> <br/>
-                                <img src={data.img} height='300px' width='500px'></img>
+                                <a href={`/animeRec/${data._id}`}><img src={data.img} height='300px' width='500px'></img></a>
                             </div>
                         )
                     })

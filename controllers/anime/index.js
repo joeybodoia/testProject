@@ -38,4 +38,15 @@ router.get('/',(req,res)=>{
     // res.render("anime/index.jsx")
 })
 
+
+// SHOW
+router.get("/:id",(req,res)=>{
+    Anime.findById(req.params.id, (err,foundAnime)=>{
+        res.render("anime/Show.jsx",{
+            data: foundAnime,
+            index: req.params.id
+        })
+    })
+})
+
 module.exports = router;
