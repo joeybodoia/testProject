@@ -52,10 +52,20 @@ router.get('/new', auth, (req,res)=>{
 // DELETE
 router.delete("/:id",(req,res)=>{
     Anime.findByIdAndRemove(req.params.id, (err,data)=>{
-        res.redirect("/animeRec")
+        res.redirect("/animeRec/myRec")
     })
 
 })
+
+// UPDATE 
+router.put('/:id', (req,res)=>{
+    Anime.findByIdAndUpdate(req.params.id,req.body,{new:true},(err,updatedModel)=>{
+    res.redirect('/animeRec/myRec')
+    })  
+})
+
+
+
 
 // CREATE
 router.post("/",auth, async (req,res)=>{
@@ -66,6 +76,16 @@ router.post("/",auth, async (req,res)=>{
     // Anime.create(req.body, (err,createdAnime)=>{
     //     res.redirect("/animeRec")
     // })
+})
+
+// EDIT
+router.get("/:id/edit",(req,res)=>{
+    Anime.findById(req.params.id, (err,foundAnime)=>{
+        res.render('anime/Edit.jsx',{
+            data:foundAnime,
+            index: req.params.id
+        })
+    })
 })
 
 
