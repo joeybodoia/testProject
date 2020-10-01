@@ -54,11 +54,19 @@ router.post("/login", async (req, res) => {
   if (user.length > 0) {
     // COMPARE PASSWORD
     const check = await bcrypt.compare(req.body.password, user[0].password);
+    const id = user[0]._id
+    console.log(id)
+    req.session._id = user[0]._id
+    console.log(req.session._id)
     if (check) {
       //SAVE INFO IN SESSION THAT USER IS LOGGEDIN AND USERNAME
       req.session.login = true;
       req.session.username = user[0].username;
-      res.redirect("/");
+      // req.sessions._id= user[0]._id
+      // console.log(req.sessions._id)
+      // console.log(user[0]._id)
+      res.redirect(`/animeRec/`);
+      // res.redirect('/')
     } else {
       // Redirect to login page if failed
       res.render("auth/fail.jsx");

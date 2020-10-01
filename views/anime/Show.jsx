@@ -11,6 +11,8 @@ class Show extends React.Component {
                 <h2>Description: {data.description}</h2>
                 <h2>Genre: {data.genre}</h2>
                 <h2>Number of episodes: {data.episodes}</h2>
+                {/* <a href={"/animeRec/myList"}><button>Add to My list</button></a> */}
+                <a href={"/animeRec"}><button>Go Back</button></a>
             </div>
         )
     }

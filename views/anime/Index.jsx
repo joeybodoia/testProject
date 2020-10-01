@@ -6,6 +6,8 @@ class Index extends React.Component {
             <div>
                 <h1>index page </h1>
                 <a href={'/animeRec/new'}><button>Add New Anime</button></a>
+                <a href={'/animeRec/myRec'}><button>My Recommendations</button></a>
+                {/* <a href={`/animeRec/userList/${this.props.user._id}`}><button>My List</button></a> */}
                 {
                     this.props.anime.map((data,index)=>{
                         return (

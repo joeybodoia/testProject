@@ -9,6 +9,11 @@ const animeSeed = require('../../models/anime/indexSeed.js')
 
 const { findById } = require('../../models/anime/index.js')
 
+// const bcrypt = require("bcryptjs");
+
+const auth = require("../authmiddleware.js")
+
+
 ///////////////////////////////////////
 // CREATE ROUTER
 ///////////////////////////////////////
@@ -29,30 +34,54 @@ router.get('/seed', (req, res) => {
   })
 
 // INDEX
-router.get('/',(req,res)=>{
+router.get('/', auth, (req,res)=>{
     Anime.find({},(err,allAnime)=>{
         res.render("anime/index.jsx",{
-            anime:allAnime
+            anime:allAnime,
+            // user: req.session
+            // userID: req.params.id     
         })
     })
-    // res.render("anime/index.jsx")
 })
 
 // NEW
-router.get('/new', (req,res)=>{
+router.get('/new', auth, (req,res)=>{
     res.render("anime/New.jsx")
 })
 
-// CREATE
-router.post("/",(req,res)=>{
-    Anime.create(req.body, (err,createdAnime)=>{
+// DELETE
+router.delete("/:id",(req,res)=>{
+    Anime.findByIdAndRemove(req.params.id, (err,data)=>{
         res.redirect("/animeRec")
     })
+
+})
+
+// CREATE
+router.post("/",auth, async (req,res)=>{
+    req.body.username = req.session.username
+    console.log(req.body)
+    const newAnime = await Anime.create(req.body)
+    res.redirect("/animeRec/myRec")
+    // Anime.create(req.body, (err,createdAnime)=>{
+    //     res.redirect("/animeRec")
+    // })
 })
 
 
+// USERList
+router.get("/myRec",auth, async (req,res)=>{
+    // res.send("hello")
+    // req.body.userID = req.session._id
+    // console.log(req.body)
+    req.body.username = req.session.username
+    const animes = await Anime.find({username:req.session.username})
+    res.render("anime/myRec.jsx",{animes})
+    
+})
+
 // SHOW
-router.get("/:id",(req,res)=>{
+router.get("/:id",auth,(req,res)=>{
     Anime.findById(req.params.id, (err,foundAnime)=>{
         res.render("anime/Show.jsx",{
             data: foundAnime,
@@ -60,6 +89,7 @@ router.get("/:id",(req,res)=>{
         })
     })
 })
+
 
 
 
