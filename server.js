@@ -5,6 +5,8 @@
 require("dotenv").config();
 const { PORT, SECRET } = process.env;
 
+// const Anime = require('./models/anime/index.js')
+
 ///////////////////////////
 // Dependencies
 //////////////////////////
@@ -58,6 +60,7 @@ app.use(morgan("tiny")); //logging
 app.get("/", (req, res) => {
   res.render("index.jsx", { hello: "Hello World" });
 });
+
 
 app.use("/auth", authRouter);
 app.use("/test", testRouter);

@@ -5,6 +5,8 @@ const { Router } = require("express");
 
 const Anime = require('../../models/anime/index.js')
 
+const User = require("../../models/auth/index.js");
+
 const animeSeed = require('../../models/anime/indexSeed.js')
 
 const { findById } = require('../../models/anime/index.js')
@@ -59,6 +61,7 @@ router.delete("/:id",(req,res)=>{
 
 // UPDATE 
 router.put('/:id', (req,res)=>{
+    console.log("hello")
     Anime.findByIdAndUpdate(req.params.id,req.body,{new:true},(err,updatedModel)=>{
     res.redirect('/animeRec/myRec')
     })  
@@ -71,7 +74,8 @@ router.put('/:id', (req,res)=>{
 // CREATE
 router.post("/",auth, async (req,res)=>{
     req.body.username = req.session.username
-    console.log(req.body)
+    req.body.likes = 0
+    // console.log(req.body)
     const newAnime = await Anime.create(req.body)
     res.redirect("/animeRec/myRec")
     // Anime.create(req.body, (err,createdAnime)=>{
@@ -102,13 +106,27 @@ router.get("/myRec",auth, async (req,res)=>{
 })
 
 // SHOW
-router.get("/:id",auth,(req,res)=>{
+router.get("/show/:id",auth,(req,res)=>{
     Anime.findById(req.params.id, (err,foundAnime)=>{
         res.render("anime/Show.jsx",{
             data: foundAnime,
             index: req.params.id
         })
     })
+})
+
+// LIKE
+router.put('/show/:id', async (req,res)=>{
+    console.log(User)
+    console.log(req.session.username)
+    
+    const user = await User.find({username:req.session.username})
+    console.log(await user.username)
+    // user.favorities.push("hello")
+    // user.save()
+    Anime.findByIdAndUpdate(req.params.id,req.body,{new:true},(err,updatedModel)=>{
+        res.redirect('/animeRec')
+        })  
 })
 
 // User.findById

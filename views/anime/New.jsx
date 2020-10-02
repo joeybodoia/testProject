@@ -7,10 +7,10 @@ class New extends React.Component {
         return(
             <Layout>
                 <div>
-                    <h1>New Page</h1>
-                    <form action="/animeRec/" method="post">
+                    <h1 className="header">New Recommendation</h1>
+                    <form className="form" action="/animeRec/" method="post">
                         {/* username: <input className = "formInput" type="text" placeholder="anime name" name="username" /> */}
-                        Name: <input className = "formInput" type="text" placeholder="anime name" name="name" /><br/>
+                        Name: <input className = "formInput" type="text" placeholder="name" name="name" /><br/>
                         Description: <input className = "formInput" type="text" placeholder="description" name="description" /><br/>
                         Image: <input className = "formInput" type="text" placeholder="image url" name="img" /><br/>
                         Genre: <input className = "formInput" type="text" placeholder="genre" name="genre" /><br/>

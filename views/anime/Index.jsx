@@ -19,8 +19,8 @@ class Index extends React.Component {
                             return (
                                 <div className="animeRecs">
                                     <h1 className="animeName">{data.name}</h1> <br/>
-                                    <a href={`/animeRec/${data._id}`}><img src={data.img} height='300px' width='500px'></img></a>
-                                    
+                                    <a href={`/animeRec/show/${data._id}`}><img src={data.img} height='300px' width='500px'></img></a>
+                                    <h1 style={{color: data.likes>0 ? 'green': 'red'}}>Likes: {data.likes}</h1>
                                 </div>
                             )
                         })

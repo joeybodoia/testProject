@@ -8,7 +8,7 @@ class Edit extends React.Component {
         return(
             <Layout>
                 <div>
-                    <h1>Edit {data.name}</h1>
+                    <h1 className="header">Edit Recommendation</h1>
                     <form className="form" action={`/animeRec/${index}?_method=PUT`} method="post">
                     Name: <input className = "formInput" type="text" placeholder="anime name" name="name" /><br/>
                         Description: <input className = "formInput" type="text" placeholder="description" name="description" /><br/>
@@ -17,7 +17,7 @@ class Edit extends React.Component {
                         Number of Episodes: <input className = "formInput" type="number" placeholder="number of episodes" name="episodes" min="0" /><br/>
                         <input type="submit" value="Update Anime"/>
                     </form>
-                    <h4><a href = {`/animeRec/${index}`}><button className = "Button">Go back</button></a></h4>
+                    {/* <h4><a href = {`/animeRec/${index}`}><button className = "Button">Go back</button></a></h4> */}
                 </div>
             </Layout>
             

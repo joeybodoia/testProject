@@ -7,7 +7,8 @@ const animeSchema = new mongoose.Schema({
     img:String,
     genre:String,
     episodes:{type:Number,min:[0]},
-    userID: String
+    likes:{type:Number,min:[0]}
+    // userID: String
 })
 
 const Anime = mongoose.model('Anime',animeSchema)
