@@ -34,7 +34,7 @@ router.get('/seed', (req, res) => {
   })
 
 // INDEX
-router.get('/', auth, (req,res)=>{
+router.get('/', (req,res)=>{
     Anime.find({},(err,allAnime)=>{
         res.render("anime/index.jsx",{
             anime:allAnime,
@@ -63,6 +63,7 @@ router.put('/:id', (req,res)=>{
     res.redirect('/animeRec/myRec')
     })  
 })
+
 
 
 
@@ -110,7 +111,15 @@ router.get("/:id",auth,(req,res)=>{
     })
 })
 
-
+// User.findById
+// function addToCast(req, res) {
+//   User.findById(req.params.id, function (err, user) {
+//     user.favorites.push(req.body.animeId);
+//     user.save(function (err) {
+//       res.redirect(`/animeRec/${anime._id}`);
+//     });
+//   });
+// }
 
 
 module.exports = router;

@@ -4,6 +4,7 @@
 const { Router } = require("express");
 const bcrypt = require("bcryptjs");
 const User = require("../../models/auth");
+const Anime = require("../../models/anime/index.js")
 
 ///////////////////////////////////////
 // CREATE ROUTER
@@ -80,10 +81,46 @@ router.post("/login", async (req, res) => {
 //LOGOUT
 router.get("/logout", (req, res) => {
   req.session.destroy();
-  res.redirect("/");
+  res.redirect("/animeRec");
 });
 
 ///////////////////////////////////////
 // Export Router
 ///////////////////////////////////////
+
+
+// Show and AddToCast
+// movie = user
+
+// 'cast' = favorites
+
+// Performer = Anime
+
+
+// User.findById
+// function addToCast(req, res) {
+//   Movie.findById(req.params.id, function (err, movie) {
+//     movie.cast.push(req.body.performerId);
+//     movie.save(function (err) {
+//       res.redirect(`/movies/${movie._id}`);
+//     });
+//   });
+// }
+
+
+// function show(req, res) {
+//   Movie.findById(req.params.id)
+//   .populate('cast').exec(function(err, movie) {
+//     // Performer.find({}).where('_id').nin(movie.cast)
+//     Performer.find({_id: {$nin: movie.cast}})
+//     .exec(function(err, performers) {
+//       console.log(performers);
+//       res.render('movies/show', {
+//         title: 'Movie Detail', movie, performers
+//       });
+//     });
+//   });
+// }
+
+
 module.exports = router;
