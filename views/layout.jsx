@@ -16,7 +16,7 @@ class Layout extends React.Component {
           {/* navbar-expand-lg */}
           <div className='navContainer'>
 
-            <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
             {/* <nav class="navbar fixed-top navbar-light bg-light"> */}
               {/* <a class="navbar-brand" href="#">Animé<span className="span">Rec</span></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,22 +25,22 @@ class Layout extends React.Component {
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link" href="/animeRec">Home <span class="sr-only">(current)</span></a>
+                    <a style={{color: "red",fontWeight:"bold"}} class="nav-link" href="/animeRec">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/auth/signup">Sign Up</a>
+                    <a style={{color: "white",fontWeight:"bold"}} class="nav-link" href="/auth/signup">  Sign Up</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/auth/login">Log in</a>
+                    <a style={{color: "white",fontWeight:"bold"}}  class="nav-link" href="/auth/login">Log in</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/auth/logout">Log Out</a>
+                    <a style={{color: "white",fontWeight:"bold"}}  class="nav-link" href="/auth/logout">Log Out</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/animeRec/myRec">My Rex</a>
+                    <a style={{color: "white",fontWeight:"bold"}}  class="nav-link" href="/animeRec/myRec">My Rex</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/animeRec/new">Add new Rec</a>
+                    <a style={{color: "white",fontWeight:"bold"}}  class="nav-link" href="/animeRec/new">Add new Rec</a>
                   </li>
                 </ul>
               </div>

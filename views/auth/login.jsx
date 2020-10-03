@@ -5,11 +5,16 @@ class Login extends React.Component {
   render() {
     return (
       <Layout title="LOGIN">
-        <form action="/auth/login" method="post">
-          <input type="text" name="username" placeholder="username"/>
-          <input type="text" name="password" placeholder="password"/>
-          <input type="submit" value="login"/>
-        </form>
+        <div className="logDiv">
+        <h1 className="logIn">Log In:</h1>
+        <div class="d-flex justify-content-center">
+          <form className="form2" action="/auth/login" method="post">
+            <input style={{color:"white"}} type="text" name="username" placeholder="username"/>
+            <input style={{color:"white"}} type="text" name="password" placeholder="password"/>
+            <input style={{backgroundColor:"white",color:"red"}} type="submit" value="login"/>
+          </form>
+        </div>
+        </div>
       </Layout>
     );
   }

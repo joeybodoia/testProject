@@ -8,7 +8,9 @@ class Index extends React.Component {
             <Layout title="Index">
 
             <div>
+                <div className="headerDiv" >
                 <h1 className="indexHeader">Animé<span>Rex</span></h1>
+                </div>
                 {/* <a href={'/animeRec/new'}><button>Add New Anime</button></a> */}
                 {/* <a href={'/animeRec/myRec'}><button>My Recommendations</button></a> */}
                 {/* <a href={`/animeRec/userList/${this.props.user._id}`}><button>My List</button></a> */}

@@ -6,26 +6,44 @@ header h1 span{
     color: black;
 } */
 
+body {
+    /* background-color: rgba(0,0,0,0.98); */
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7ad7c51-280d-4255-9964-e9ddd1c19f10/d7wl14k-c9e60007-9649-418b-a1bb-4cf537239e80.jpg/v1/fill/w_1280,h_569,q_75,strp/realistic_poster_anime_montage_by_realisticgfx_d7wl14k-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NjkiLCJwYXRoIjoiXC9mXC9iN2FkN2M1MS0yODBkLTQyNTUtOTk2NC1lOWRkZDFjMTlmMTBcL2Q3d2wxNGstYzllNjAwMDctOTY0OS00MThiLWExYmItNGNmNTM3MjM5ZTgwLmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.DnTeWv2QDdvGFj24slwCpby5a5B8Q_doDo51qpRB7ek");
+}
+
 .span {
     color: "red"
 }
 
 .navContainer {
-    margin-bottom: 60px;
+    margin-bottom: 5%;
 }
 
+.headerDiv {
+    background-color: black;
+    border:4px solid white;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 5%;
+    text-align: center;
+    border-radius: 10px;
+}
 .indexHeader {
+    font-size: 100px;
     text-align:center;
     color: red;
+    margin-bottom: 10%;
 }
 
 .indexHeader span{
-    color: black;
+    color: white;
 }
 
 .animeRecs {
+    background-color: black;
     text-align: center;
-    border: 2px solid black;
+    border: 4px solid white;
+    border-radius: 10px;
     margin-bottom: 5%;
     /* height: 450px; */
     max-width: 500px;
@@ -50,4 +68,53 @@ header h1 span{
 
 .likes {
     color: green
+}
+
+
+.navButton {
+    color: red;
+}
+
+.navButton2 {
+    color: black;
+}
+
+
+
+.logIn {
+    font-size: 60px;
+    text-align: center;
+    color:red;
+    margin-bottom: 5%;
+}
+
+.logDiv {
+    border: 4px solid white;
+    background-color: black;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10px;
+}
+
+.recDiv {
+    color: red;
+    border: 4px solid white;
+    background-color: black;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    
+}
+
+.newDiv {
+    color: red;
+    border: 4px solid white;
+    background-color: black;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10px;
+    margin-bottom: 15%;
+    
+
 }
