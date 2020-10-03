@@ -11,7 +11,7 @@ class Login extends React.Component {
           <form className="form2" action="/auth/login" method="post">
             <input style={{color:"white"}} type="text" name="username" placeholder="username"/>
             <input style={{color:"white"}} type="text" name="password" placeholder="password"/>
-            <input style={{backgroundColor:"white",color:"red"}} type="submit" value="login"/>
+            <input style={{backgroundColor:"white",color:"red",fontSize:"20px"}} type="submit" value="login"/>
           </form>
         </div>
         </div>

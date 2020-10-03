@@ -15,7 +15,7 @@ class New extends React.Component {
                         Image: <input className = "formInput" type="text" placeholder="image url" name="img" /><br/>
                         Genre: <input className = "formInput" type="text" placeholder="genre" name="genre" /><br/>
                         Number of Episodes: <input className = "formInput" type="number" placeholder="number of episodes" name="episodes" min="0" /><br/>
-                        <input style={{backgroundColor:"white",color:"red",marginBottom:"5%"}}type="submit" value="Add Anime"/>
+                        <input style={{backgroundColor:"white",color:"red",marginBottom:"5%", fontSize:"24px"}}type="submit" value="Add Anime"/>
                     </form>
                 </div>
             </Layout>

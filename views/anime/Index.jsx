@@ -9,7 +9,7 @@ class Index extends React.Component {
 
             <div>
                 <div className="headerDiv" >
-                <h1 className="indexHeader">Animé<span>Rex</span></h1>
+                <h1 style={{textShadow:"2px 2px white"}} className="indexHeader">Animé<span style={{textShadow:"2px 2px red"}}>Rex</span></h1>
                 </div>
                 {/* <a href={'/animeRec/new'}><button>Add New Anime</button></a> */}
                 {/* <a href={'/animeRec/myRec'}><button>My Recommendations</button></a> */}
@@ -20,7 +20,7 @@ class Index extends React.Component {
                         this.props.anime.map((data,index)=>{
                             return (
                                 <div className="animeRecs">
-                                    <h1 className="animeName">{data.name}</h1> <br/>
+                                    <h1 style={{textShadow:"2px 2px white",fontSize:"60px"}} className="animeName">{data.name}</h1> <br/>
                                     <a href={`/animeRec/show/${data._id}`}><img src={data.img} height='300px' width='500px'></img></a>
                                     <h1 style={{color: data.likes>0 ? 'green': 'red'}}>Likes: {data.likes}</h1>
                                 </div>

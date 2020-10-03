@@ -20,10 +20,10 @@ class Mylist extends React.Component {
                                 
                                 <div class="d-flex justify-content-sm-between">
                                     <form className = "form" action={`/animeRec/${anime._id}/edit`}>
-                                        <input style={{backgroundColor:"white",color:"red",paddingRight:"0.3%"}} className = "editButton" id="edit" type="submit" value="Edit Recommendation" />
+                                        <input style={{backgroundColor:"white",color:"red",paddingRight:"0.3%", fontSize:"20px"}} className = "editButton" id="edit" type="submit" value="Edit Recommendation" />
                                     </form>
                                     <form className="form" action={`/animeRec/${anime._id}?_method=DELETE`} method='POST'>
-                                        <input style={{backgroundColor:"white",color:"red",paddingRight:"0.3%"}} className = "deleteButton" type="submit" value="Delete Recommendation" /> 
+                                        <input style={{backgroundColor:"white",color:"red",paddingRight:"0.3%", fontSize:"20px"}} className = "deleteButton" type="submit" value="Delete Recommendation" /> 
                                     </form>
                                 </div>
                             </div>
