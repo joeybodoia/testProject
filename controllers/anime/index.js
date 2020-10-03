@@ -38,7 +38,7 @@ router.get('/seed', (req, res) => {
 // INDEX
 router.get('/', (req,res)=>{
     Anime.find({},(err,allAnime)=>{
-        res.render("anime/index.jsx",{
+        res.render("anime/Index.jsx",{
             anime:allAnime,
             // user: req.session
             // userID: req.params.id     
