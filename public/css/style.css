@@ -20,10 +20,10 @@ header h1 span{
 
 body {
     /* background-color: rgba(0,0,0,0.98); */
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7ad7c51-280d-4255-9964-e9ddd1c19f10/d7wl14k-c9e60007-9649-418b-a1bb-4cf537239e80.jpg/v1/fill/w_1280,h_569,q_75,strp/realistic_poster_anime_montage_by_realisticgfx_d7wl14k-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NjkiLCJwYXRoIjoiXC9mXC9iN2FkN2M1MS0yODBkLTQyNTUtOTk2NC1lOWRkZDFjMTlmMTBcL2Q3d2wxNGstYzllNjAwMDctOTY0OS00MThiLWExYmItNGNmNTM3MjM5ZTgwLmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.DnTeWv2QDdvGFj24slwCpby5a5B8Q_doDo51qpRB7ek");
+    /* background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7ad7c51-280d-4255-9964-e9ddd1c19f10/d7wl14k-c9e60007-9649-418b-a1bb-4cf537239e80.jpg/v1/fill/w_1280,h_569,q_75,strp/realistic_poster_anime_montage_by_realisticgfx_d7wl14k-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NjkiLCJwYXRoIjoiXC9mXC9iN2FkN2M1MS0yODBkLTQyNTUtOTk2NC1lOWRkZDFjMTlmMTBcL2Q3d2wxNGstYzllNjAwMDctOTY0OS00MThiLWExYmItNGNmNTM3MjM5ZTgwLmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.DnTeWv2QDdvGFj24slwCpby5a5B8Q_doDo51qpRB7ek"); */
     /* background-image: url("https://cutewallpaper.org/21/anime-character-backgrounds/All-Anime-Wallpapers-Top-Free-All-Anime-Backgrounds-.jpg") */
     /* background-image: url("https://wallpaperaccess.com/full/538969.jpg")  */
-    /* background-image: url("https://i.pinimg.com/originals/be/c6/70/bec670614edbd90ac080da68939817f2.jpg")  */
+    background-image: url("https://i.pinimg.com/originals/be/c6/70/bec670614edbd90ac080da68939817f2.jpg") 
 }
 
 .span {
