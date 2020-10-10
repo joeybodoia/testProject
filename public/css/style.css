@@ -31,7 +31,7 @@ body {
 }
 
 .navContainer {
-    margin-bottom: 5%;
+    margin-bottom: 8%;
 }
 
 .headerDiv {
@@ -50,6 +50,7 @@ body {
     text-align:center;
     color: red;
     margin-bottom: 10%;
+    margin-top: 2%;
 }
 
 .indexHeader span{
