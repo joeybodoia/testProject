@@ -59,7 +59,8 @@ app.use(morgan("tiny")); //logging
 //Routes and Routers
 //////////////
 app.get("/", (req, res) => {
-  res.render("index.jsx", { hello: "Hello World" });
+  // res.render("index.jsx", { hello: "Hello World" });
+  res.redirect("/animeRec")
 });
 
 
